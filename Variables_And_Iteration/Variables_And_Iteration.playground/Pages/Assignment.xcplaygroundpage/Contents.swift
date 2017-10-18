@@ -25,18 +25,8 @@ canvas.drawShapesWithFill = false
 
 // Loop to set horizontal position
 for x in stride(from: 50, through: 450, by: 100){
+canvas.drawLine(fromX: x, fromY: , toX: <#T##Int#>, toY: <#T##Int#>)
     
-    // LOop to set vertical position
-    for y in stride(from: 450, through: 50, by: -100){
-        
-        // Draw five Squares
-        for size in stride(from: 100, through: 20, by: -20) {
-            
-             canvas.drawRectangle(centreX: x, centreY: y, width: size, height: size)
-        }
-    
-       
-    }
  
 
 }

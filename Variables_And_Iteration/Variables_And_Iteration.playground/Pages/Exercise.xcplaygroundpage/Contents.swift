@@ -33,7 +33,22 @@ canvas.drawRectangle(centreX: 0, centreY: 0, width: 700, height: 100)
 
 // Draw Triaangle
 for i in 1...50 {
+    // Downward Sloping Mountains
     canvas.drawLine(fromX: i, fromY: 0, toX: i, toY: 200-i)
+    canvas.drawLine(fromX: i+100, fromY: 0, toX: i+100, toY: 200-i)
+      canvas.drawLine(fromX: i+200, fromY: 0, toX: i+200, toY: 200-i)
+    
+    // Upward Sloping Mountains
+    canvas.drawLine(fromX: i+50, fromY: 0, toX: i+50, toY: 150+i)
+    canvas.drawLine(fromX: i, fromY: 0, toX: i, toY: 200-i)
+   
+    // Upward Sloping Montains
+    canvas.drawLine(fromX: i, fromY: 0, toX: i, toY: 200-i)
+
+
+
+
+
 }
 
 /*:
