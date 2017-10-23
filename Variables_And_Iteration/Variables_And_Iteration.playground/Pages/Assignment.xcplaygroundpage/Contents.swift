@@ -20,19 +20,18 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 500, height: 500)
 
-// no fill
-canvas.drawShapesWithFill = false
+//BorderWidth
+canvas.drawShapesWithBorders = false
 
-// Loop to set horizontal position
-for x in stride(from: 50, through: 450, by: 100){
-canvas.drawLine(fromX: x, fromY: , toX: <#T##Int#>, toY: <#T##Int#>)
-    
- 
+//draw Circles
 
+for x in stride(from: 0, through: 500, by: 25)  {
+    for y in stride(from: 0, to: 500, by: 30)  {
+        canvas.fillColor = Color.red
+        canvas.drawEllipse(centreX: x, centreY: y, width: 30, height: 30)
+    }
 }
-    
-    
-   
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
