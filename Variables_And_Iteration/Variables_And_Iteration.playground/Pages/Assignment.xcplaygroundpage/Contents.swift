@@ -32,6 +32,7 @@ for x in stride(from: 0, through: 500, by: 25)  {
     }
 }
 
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.

@@ -17,6 +17,8 @@ import PlaygroundSupport
 let canvas = Canvas(width: 300, height: 300)
 
 //: ## Add your code below
+
+
 //draw Circles
 for x in stride(from: 0, through: 300, by: 30)  {
     for y in stride(from: 0, to: 300, by: 30)  {
@@ -26,7 +28,7 @@ for x in stride(from: 0, through: 300, by: 30)  {
 // Draw first rectangle
 canvas.fillColor = Color.init(hue: 30, saturation: 0, brightness: 25, alpha: 90)
 canvas.drawRectangle(centreX: 0, centreY: 0, width: 700, height: 300)
-
+canvas.drawShapesWithBorders = false
 // DraW second Rectangle
 canvas.fillColor = Color.init(hue: 30 , saturation: 0 , brightness: 30, alpha: 100)
 canvas.drawRectangle(centreX: 0, centreY: 0, width: 700, height: 100)
@@ -42,14 +44,17 @@ for i in 1...50 {
     canvas.drawLine(fromX: i+50, fromY: 0, toX: i+50, toY: 150+i)
     canvas.drawLine(fromX: i, fromY: 0, toX: i, toY: 200-i)
    
-    // Upward Sloping Montains
+    // Upward Sloping Mountain
+    canvas.drawLine(fromX: i+150, fromY: 0, toX: i+150, toY: 150+i)
+    canvas.drawLine(fromX: i, fromY: 0, toX: i, toY: 200-i)
+
+    // Upward Sloping Mountain
+    canvas.drawLine(fromX: i+250, fromY: 0, toX: i+250, toY: 150+i)
     canvas.drawLine(fromX: i, fromY: 0, toX: i, toY: 200-i)
 
 
-
-
-
 }
+
 
 /*:
  ## Template code
