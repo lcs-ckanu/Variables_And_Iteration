@@ -23,15 +23,24 @@ let canvas = Canvas(width: 500, height: 500)
 //BorderWidth
 canvas.drawShapesWithBorders = false
 
-//draw Circles
-
+// Draw Rectangle
 for x in stride(from: 0, through: 500, by: 25)  {
     for y in stride(from: 0, to: 500, by: 30)  {
-        canvas.fillColor = Color.red
-        canvas.drawRectangle(centreX: x, centreY: y, width: 9, height: 9)
+        if x %  50 == 0 {
+            canvas.fillColor = Color.red
+            canvas.drawRectangle(centreX: x, centreY: y, width: 30, height: 20)
+            // Draw Circles
+        } else if x % 75 == 0 {
+            canvas.fillColor = Color.blue
+            canvas.drawEllipse(centreX: x, centreY: y, width: 25, height: 25)
+        } else {
+            //  Draw Lines
+            canvas.defaultLineWidth = 2
+            canvas.fillColor = Color.black
+            canvas.drawLine(fromX: x, fromY: y, toX: 0, toY: 500)
+        }
     }
 }
-
 
 /*:
  ## Template code
